@@ -1,4 +1,4 @@
-FROM gitpod/workspace-full-vnc:latest
+FROM gitpod/workspace-full:latest
 
 USER root
 RUN apt-get update -y -q \
@@ -8,7 +8,6 @@ RUN apt-get update -y -q \
   && curl -fsSL -k https://github.com/Dyalog/ride/releases/download/v4.2.3437/ride-4.2.3437-1_amd64.deb -o ride.deb \
   && DEBIAN_FRONTEND=noninteractive apt-get install -y -q --no-install-recommends ./dyalog.deb \
   && DEBIAN_FRONTEND=noninteractive apt-get install -y -q --no-install-recommends ./ride.deb
-  # && unzip ./acre.zip && cd acre14.0 && dyalog acre.dws
 
 USER gitpod
 RUN curl -fsSL -k https://github.com/the-carlisle-group/Acre-Desktop/releases/download/v6.0.2.266/acre14.0.zip -o acre.zip \

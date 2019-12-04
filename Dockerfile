@@ -13,9 +13,9 @@ RUN apt-get update -y -q \
 USER gitpod
 RUN curl -fsSL -k https://github.com/the-carlisle-group/Acre-Desktop/releases/download/v6.0.2.266/acre14.0.zip -o acre.zip \
   && unzip ./acre.zip && cd acre14.0 && ( \
-    echo ")load salt" \
-    echo "enableSALT" \
-    echo ")load acre.dws" \
+    echo ")load salt" && \
+    echo "enableSALT" && \
+    echo ")load acre.dws" && \
     echo \
   ) | dyalog
 

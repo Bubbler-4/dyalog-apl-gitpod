@@ -10,3 +10,4 @@ The Docker image has the following installed:
 
 If you open this on Gitpod, zero-footprint RIDE starts automatically,
 and you can access it through a button on Gitpod IDE, which is at "Open Ports" - 4502 - "Open Browser".
+This allows a user to try Dyalog APL on the browser without installing on the local machine.

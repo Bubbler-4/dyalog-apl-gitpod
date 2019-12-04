@@ -1,5 +1,5 @@
 image:
-    file: docker/gitpod.Dockerfile
+    file: Dockerfile
     context: docker
 ports:
   - port: 6080

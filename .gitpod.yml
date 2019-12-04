@@ -1,5 +1,7 @@
 image:
     file: Dockerfile
 ports:
-  - port: 6080
+  - port: 4502
     protocol: "http"
+tasks:
+  - command: "RIDE_INIT=HTTP:*:4502 dyalog"

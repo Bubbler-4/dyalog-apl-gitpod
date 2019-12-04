@@ -16,4 +16,4 @@ RUN apt-get update -y -q \
   && curl -fsSL -k https://github.com/the-carlisle-group/Acre-Desktop/releases/download/v6.0.2.266/acre14.0.zip -o acre.zip \
   && DEBIAN_FRONTEND=noninteractive apt-get install -y -q --no-install-recommends ./dyalog.deb \
   && DEBIAN_FRONTEND=noninteractive apt-get install -y -q --no-install-recommends ./ride.deb \
-  && unzip ./acre.zip && cd acre14.0 && timeout 5 dyalog acre.dws
+  && unzip ./acre.zip && cd acre14.0 && dyalog acre.dws

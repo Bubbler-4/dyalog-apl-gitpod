@@ -12,7 +12,6 @@ RUN apt-get update -y -q \
   # && cd /opt && ln -s ride-4.3 ride-4.2 && cd /tmp
 
 USER gitpod
-RUN printf "[Ride]\nhttpdir=/opt/ride-4.3/resources/app\n" > ~/.dyalog/ride.ini
 RUN curl -fsSL -k https://github.com/the-carlisle-group/Acre-Desktop/releases/download/v6.0.2.266/acre14.0.zip -o acre.zip \
   && unzip ./acre.zip && cd acre14.0 && ( \
     echo ")load salt" && \
@@ -20,5 +19,6 @@ RUN curl -fsSL -k https://github.com/the-carlisle-group/Acre-Desktop/releases/do
     echo ")load acre.dws" && \
     echo \
   ) | dyalog
+RUN printf "[Ride]\nhttpdir=/opt/ride-4.3/resources/app\n" > ~/.dyalog/ride.ini
 
 USER root

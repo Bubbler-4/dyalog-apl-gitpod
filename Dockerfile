@@ -19,6 +19,6 @@ RUN cd /tmp \
   && mkdir tatin && unzip ./tatin.zip -d tatin \
   && mkdir ~/MyUCMDs \
   && cp -a cider/. ~/MyUCMDs/ && cp -a tatin/. ~/MyUCMDs/
-RUN printf "[Ride]\nhttpdir=/opt/ride-4.4/resources/app\n" > ~/.dyalog/ride.ini
+RUN mkdir ~/.dyalog && printf "[Ride]\nhttpdir=/opt/ride-4.4/resources/app\n" > ~/.dyalog/ride.ini
 
 USER root

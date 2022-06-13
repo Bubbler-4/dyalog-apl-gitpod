@@ -2,7 +2,7 @@ FROM gitpod/workspace-full:latest
 
 USER root
 RUN apt-get update -y -q \
-  # Download unregistered Linux build of Dyalog APL, RIDE, and Acre
+  # Download unregistered Linux build of Dyalog APL, RIDE, Cider, and Tatin
   && cd /tmp \
   && curl -fsSL -k https://www.dyalog.com/uploads/php/download.dyalog.com/download.php?file=18.2/linux_64_18.2.45405_unicode.x86_64.deb -o dyalog.deb \
   && curl -fsSL -k https://github.com/Dyalog/ride/releases/download/v4.4.3689/ride-4.4.3689-1_amd64.deb -o ride.deb \

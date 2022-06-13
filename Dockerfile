@@ -15,7 +15,8 @@ USER gitpod
 RUN cd /tmp \
   && curl -fsSL -k https://github.com/aplteam/Cider/releases/download/v0.11.0/Cider-0.11.0.zip -o cider.zip \
   && curl -fsSL -k https://github.com/aplteam/Tatin/releases/download/v0.69.0/Tatin-Client-0.69.0.zip -o tatin.zip \
-  && unzip ./cider.zip && unzip ./tatin.zip \
+  && mkdir cider && unzip ./cider.zip -d cider \
+  && mkdir tatin && unzip ./tatin.zip -d tatin \
   && mkdir ~/MyUCMDs \
   && cp -a cider/. ~/MyUCMDs/ && cp -a tatin/. ~/MyUCMDs/
 RUN printf "[Ride]\nhttpdir=/opt/ride-4.4/resources/app\n" > ~/.dyalog/ride.ini
